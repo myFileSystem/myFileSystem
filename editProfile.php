@@ -3,7 +3,7 @@ $title = "个人资料";
 $thisprog = "editProfile.php";
 require ("global.php");
 echo "<title>$title /$xtm</title>";
-//test
+//tuuuu
 $link = mysql_connect('127.0.0.1', 'root', 'squall') or die('Could not connect: ' . mysql_error());
 mysql_select_db('app') or die('Could not select database');
 $query = "SELECT * FROM user WHERE userName='$_SESSION[userName]'";
