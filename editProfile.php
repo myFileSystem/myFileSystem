@@ -3,6 +3,7 @@ $title = "个人资料";
 $thisprog = "editProfile.php";
 require ("global.php");
 echo "<title>$title /$xtm</title>";
+
 //test
 //test2
 $link = mysql_connect('127.0.0.1', 'root', 'squall') or die('Could not connect: ' . mysql_error());
