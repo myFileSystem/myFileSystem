@@ -12,8 +12,6 @@ if (isset ($_COOKIE))
 else
 	$testcookie = "<font color=990000>Ê§ °Ü</font>";
 
-session_start();
-
 $query = "SELECT * FROM user WHERE userName='$_SESSION[userName]'";
 $users = mysql_query($query) or die('Query failed: ' . mysql_error());
 

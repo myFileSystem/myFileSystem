@@ -6,7 +6,6 @@ echo "<title>$title /$xtm</title>";
 
 $link = mysql_connect('127.0.0.1', 'root', 'squall') or die('Could not connect: ' . mysql_error());
 mysql_select_db('app') or die('Could not select database');
-session_start();
 $query = "SELECT * FROM user WHERE userName='$_SESSION[userName]'";
 $users = mysql_query($query) or die('Query failed: ' . mysql_error());
 if ($users == 0) {
@@ -16,17 +15,7 @@ if ($users == 0) {
 	$line = mysql_fetch_array($users, MYSQL_ASSOC);
 }
 
-if ($_GET['action'] == "edit") {
 
-	$userName = $line[userName];
-	$oldpwd = md5($_POST['password']);
-	$chineseName = $_POST['chineseName'];
-	$newpwd = $_POST['newpwd'];
-	$newpwd1 = $_POST['newpwd1'];
-	$userCompany = $_POST['userCompany'];
-	$userTel = $_POST['usertel'];
-	$userEmail = $_POST['email'];
-}
 print "<tr><td bgcolor=#CBDED8 colspan=3><b>$xtm/ $title</b> </td></tr>";
 
 print<<<EOT
@@ -106,9 +95,20 @@ print<<<EOT
 </form>
 
 EOT;
-exit;
 
 if ($_GET['action'] == "edit") {
+
+	$userName = $line[userName];
+	$oldpwd = md5($_POST['password']);
+//	echo "<script>alert(\"$oldpwd\");</script>";
+//	echo "<script>alert(\"$line[password]\");</script>";
+	$chineseName = $_POST['chineseName'];
+	$newpwd = $_POST['newpwd'];
+	$newpwd1 = $_POST['newpwd1'];
+	$userCompany = $_POST['userCompany'];
+	$userTel = $_POST['usertel'];
+	$userEmail = $_POST['email'];
+
 	if ($oldpwd != $line[password]) {
 		echo "<script>alert(\"您输入的密码错误，请重新输入！\");javascript:history.go(-1);</script>";
 		exit ();
@@ -142,6 +142,7 @@ if ($_GET['action'] == "edit") {
 
 	if ($newpwd != "") {
 		mysql_query("UPDATE user SET password='$usrpwdEditMD5',chineseName='$chineseName',company='$userCompany',phoneNumber='$userTel',emailAddr='$userEmail' WHERE userName='$userName'");
+		session_destroy();
 		echo "<script>alert(\"操作成功，因为密码已经修改，请重新登录！\");</script><meta http-equiv=refresh content=0;url=index.php>";
 	} else {
 		mysql_query("UPDATE user SET chineseName='$chineseName',company='$userCompany',phoneNumber='$userTel',emailAddr='$userEmail' WHERE userName='$userName'");
