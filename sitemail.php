@@ -13,16 +13,16 @@ if (empty ($page))
 if ($page < 1)
 	$page = 1;
 settype($page, integer);
-$perpage = 20;
+$perpage = 30;
 print "<tr><td bgcolor=#CBDED8 colspan=3><b>$xtm/ $title</b> </td></tr>";
 $del = $_GET['del'];
 if ($del == 'all') {
-	mysql_query("delete * from sitemessage where messageTo='$_SESSION[userId]'") or die(mysql_error());
+	mysql_query("delete from sitemessage where messageTo='$_SESSION[userId]'") or die(mysql_error());
 	echo "<script>alert(\"成功清空信箱！\");</script><meta http-equiv=refresh content=0;url=$thisprog>";
 	exit;
 }
 elseif (!empty ($del)) {
-	mysql_query("delete * from sitemessage where id='$del'") or die(mysql_error());
+	mysql_query("delete from sitemessage where id='$del'") or die(mysql_error());
 	echo "<script>alert(\"成功删除信息！\");</script><meta http-equiv=refresh content=0;url=$thisprog>";
 	exit;
 }
@@ -36,7 +36,7 @@ elseif (!empty ($del)) {
         <tr bgcolor="#DAEFE1">
           <td height="20">
 <center><a href="javascript:history.go(0)">刷新</a>  &nbsp;&nbsp;<a href="javascript:void(1)" onClick="window.open ('writemail.php','','top=100,left=0,width=700,height=465,status=no,resizable=yes,scrollbars=yes');">
-<img src="images/write.gif" border=0>发送消息</a>&nbsp;&nbsp;&nbsp;&nbsp; <form><a href="<?php $thisprog ?>?del=all"  OnClick="JavaScript: if(confirm('确实要清空信箱吗？')) return true; else return false;"><img src="images/fol-over.jpg" border=0>清空</a></form>&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="images/write.gif" border=0>发送消息</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="<?php $thisprog ?>?del=all"  OnClick="JavaScript: if(confirm('确实要清空信箱吗？')) return true; else return false;"><img src="images/fol-over.jpg" border=0>清空</a>&nbsp;&nbsp;&nbsp;&nbsp;
 <?
 
 
@@ -44,7 +44,7 @@ $query = "SELECT * FROM user where id='$_SESSION[userId]'";
 $users = mysql_query($query) or die('Query failed: ' . mysql_error());
 $line = mysql_fetch_array($users, MYSQL_ASSOC);
 if ($line[userRight] == 'super') {
-	echo "<a href=javascript:void(5) onClick=\"window.open ('superwrite.php','','top=100,left=0,width=700,height=503,status=no,resizable=yes,scrollbars=yes');\"><img src=images/write.gif border=0>发送系统消息</a> ";
+	echo "<a href=javascript:void(5) onClick=\"window.open ('writemail.php?systemMail=true','','top=100,left=0,width=700,height=503,status=no,resizable=yes,scrollbars=yes');\"><img src=images/write.gif border=0>发送系统消息</a> ";
 }
 ?>
 <?
