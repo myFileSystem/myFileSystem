@@ -1,8 +1,51 @@
-INSERT INTO `app` (`name`, `sequence`, `size`, `discription`, `version`, `time`, `categoryName`, `author`, `price`, `icon`, `download`, `truncation1`, `truncation2`, `truncation3`, `truncation4`, `software`) VALUES ('chenjm', 12, 31, 'chenjm', '0', '2012-2-2', 'sport', 'chenjm', 21, '23423', 122, 0x443A2F777777726F6F742F6262626262622F6C6470695F3135383632305F3330666464306638352D333839302D343763332D393033302D3761343164643931383263312E6A7067, 0x443A2F777777726F6F742F6262626262622F6C6470695F3135383632305F3535623832303361662D383230342D346562332D623565352D6537353336323730313865302E6A7067, 0x443A2F777777726F6F742F6262626262622F6C6470695F3135383632305F3436366565643564312D313736332D346162372D623833312D3666393333636636396564322E6A7067, 0x443A2F777777726F6F742F6262626262622F756E7469746C65642E706E67, 0x443A2F777777726F6F742F6262626262622F6C6470695F31353836323030626262386532622D656563612D343933372D383838652D3264363934343839306337325F69636F6E2E706E67);
-INSERT INTO `app` (`name`, `sequence`, `size`, `discription`, `version`, `time`, `categoryName`, `author`, `price`, `icon`, `download`, `truncation1`, `truncation2`, `truncation3`, `truncation4`, `software`) VALUES ('酷狗音乐网络播放器', 1, 12, '酷狗音乐网络播放器', '4.1.0', '2012-1-30', 'entertainment', '广州酷狗计算机科技有限公司', 21, 'aa', 2132131, '', '', '', '', '');
-INSERT INTO `app` (`name`, `sequence`, `size`, `discription`, `version`, `time`, `categoryName`, `author`, `price`, `icon`, `download`, `truncation1`, `truncation2`, `truncation3`, `truncation4`, `software`) VALUES ('陈嘉明', 123111, 21, '描述', '0', '2011-12-26', 'tool', '好汉', 123, '234', 333333, 0x443A2F777777726F6F742F6262626262622F6C6470695F3135383632305F3330666464306638352D333839302D343763332D393033302D3761343164643931383263312E6A7067, 0x443A2F777777726F6F742F6262626262622F6C6470695F3135383632305F3535623832303361662D383230342D346562332D623565352D6537353336323730313865302E6A7067, 0x443A2F777777726F6F742F6262626262622F6C6470695F3135383632305F3436366565643564312D313736332D346162372D623833312D3666393333636636396564322E6A7067, 0x443A2F777777726F6F742F6262626262622F756E7469746C65642E706E67, 0x443A2F777777726F6F742F6262626262622F6C6470695F31353836323030626262386532622D656563612D343933372D383838652D3264363934343839306337325F69636F6E2E706E67);
-INSERT INTO `app` (`name`, `sequence`, `size`, `discription`, `version`, `time`, `categoryName`, `author`, `price`, `icon`, `download`, `truncation1`, `truncation2`, `truncation3`, `truncation4`, `software`) VALUES ('益盟操盘手', 1001, 23, '益盟操盘手', '2.1.5', '2011-11-22', 'tool', '上海益盟软件', 23, '123', 234, '', '', '', '', '');
-INSERT INTO `app` (`name`, `sequence`, `size`, `discription`, `version`, `time`, `categoryName`, `author`, `price`, `icon`, `download`, `truncation1`, `truncation2`, `truncation3`, `truncation4`, `software`) VALUES ('大众点评', 1002, 123, '大众点评', '4.6', '2012-2-18', 'tool', '大众点评', 234, '21', 123, '', '', '', '', '');
-INSERT INTO `app` (`name`, `sequence`, `size`, `discription`, `version`, `time`, `categoryName`, `author`, `price`, `icon`, `download`, `truncation1`, `truncation2`, `truncation3`, `truncation4`, `software`) VALUES ('91乐淘', 1003, 25, '25', '3.4.5', '2012-3-23', 'tool', '91乐淘', 36, '36', 123, '', '', '', '', '');
-INSERT INTO `app` (`name`, `sequence`, `size`, `discription`, `version`, `time`, `categoryName`, `author`, `price`, `icon`, `download`, `truncation1`, `truncation2`, `truncation3`, `truncation4`, `software`) VALUES ('永恒斗士', 1004, 66, '永恒斗士', '2.0.0', '2012-2-24', 'game', '永恒斗士', 36, '21', 33, '', '', '', '', '');
-INSERT INTO `app` (`name`, `sequence`, `size`, `discription`, `version`, `time`, `categoryName`, `author`, `price`, `icon`, `download`, `truncation1`, `truncation2`, `truncation3`, `truncation4`, `software`) VALUES ('德斯尼亚传奇', 1005, 123, '德斯尼亚传奇', '1.0.6', '2011-12-16', 'game', 'GAMECILL Inc', 123, '34', 123, '', '', '', '', '');
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : root
+Source Server Version : 60000
+Source Host           : localhost:3306
+Source Database       : app
+
+Target Server Type    : MYSQL
+Target Server Version : 60000
+File Encoding         : 65001
+
+Date: 2012-02-08 16:14:06
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+-- ----------------------------
+-- Table structure for `app`
+-- ----------------------------
+DROP TABLE IF EXISTS `app`;
+CREATE TABLE `app` (
+  `name` char(20) NOT NULL,
+  `sequence` int(10) NOT NULL AUTO_INCREMENT,
+  `size` int(10) NOT NULL,
+  `discription` varchar(20) NOT NULL,
+  `version` char(20) NOT NULL,
+  `time` date NOT NULL,
+  `categoryName` char(20) NOT NULL,
+  `author` varchar(20) NOT NULL,
+  `price` int(10) NOT NULL,
+  `icon` char(20) NOT NULL,
+  `download` int(20) NOT NULL,
+  `truncation1` blob NOT NULL,
+  `truncation2` blob NOT NULL,
+  `truncation3` blob NOT NULL,
+  `truncation4` blob NOT NULL,
+  `software` blob NOT NULL,
+  PRIMARY KEY (`sequence`)
+) ENGINE=MyISAM AUTO_INCREMENT=123112 DEFAULT CHARSET=gb2312;
+
+-- ----------------------------
+-- Records of app
+-- ----------------------------
+INSERT INTO `app` VALUES ('chenjm', '12', '31', 'chenjm', '0', '2012-02-02', 'sport', 'chenjm', '21', '23423', '122', 0x443A2F777777726F6F742F6262626262622F6C6470695F3135383632305F3330666464306638352D333839302D343763332D393033302D3761343164643931383263312E6A7067, 0x443A2F777777726F6F742F6262626262622F6C6470695F3135383632305F3535623832303361662D383230342D346562332D623565352D6537353336323730313865302E6A7067, 0x443A2F777777726F6F742F6262626262622F6C6470695F3135383632305F3436366565643564312D313736332D346162372D623833312D3666393333636636396564322E6A7067, 0x443A2F777777726F6F742F6262626262622F756E7469746C65642E706E67, 0x443A2F777777726F6F742F6262626262622F6C6470695F31353836323030626262386532622D656563612D343933372D383838652D3264363934343839306337325F69636F6E2E706E67);
+INSERT INTO `app` VALUES ('酷狗音乐网络播放器', '1', '12', '酷狗音乐网络播放器', '4.1.0', '2012-01-30', 'entertainment', '广州酷狗计算机科技有限公司', '21', 'aa', '2132131', '', '', '', '', '');
+INSERT INTO `app` VALUES ('陈嘉明', '123111', '21', '描述', '0', '2011-12-26', 'tool', '好汉', '123', '234', '333333', 0x443A2F777777726F6F742F6262626262622F6C6470695F3135383632305F3330666464306638352D333839302D343763332D393033302D3761343164643931383263312E6A7067, 0x443A2F777777726F6F742F6262626262622F6C6470695F3135383632305F3535623832303361662D383230342D346562332D623565352D6537353336323730313865302E6A7067, 0x443A2F777777726F6F742F6262626262622F6C6470695F3135383632305F3436366565643564312D313736332D346162372D623833312D3666393333636636396564322E6A7067, 0x443A2F777777726F6F742F6262626262622F756E7469746C65642E706E67, 0x443A2F777777726F6F742F6262626262622F6C6470695F31353836323030626262386532622D656563612D343933372D383838652D3264363934343839306337325F69636F6E2E706E67);
+INSERT INTO `app` VALUES ('益盟操盘手', '1001', '23', '益盟操盘手', '2.1.5', '2011-11-22', 'tool', '上海益盟软件', '23', '123', '234', '', '', '', '', '');
+INSERT INTO `app` VALUES ('大众点评', '1002', '123', '大众点评', '4.6', '2012-02-18', 'tool', '大众点评', '234', '21', '123', '', '', '', '', '');
+INSERT INTO `app` VALUES ('91乐淘', '1003', '25', '25', '3.4.5', '2012-03-23', 'tool', '91乐淘', '36', '36', '123', '', '', '', '', '');
+INSERT INTO `app` VALUES ('永恒斗士', '1004', '66', '永恒斗士', '2.0.0', '2012-02-24', 'game', '永恒斗士', '36', '21', '33', '', '', '', '', '');
+INSERT INTO `app` VALUES ('德斯尼亚传奇', '1005', '123', '德斯尼亚传奇', '1.0.6', '2011-12-16', 'game', 'GAMECILL Inc', '123', '34', '123', '', '', '', '', '');
