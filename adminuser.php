@@ -34,7 +34,7 @@ if (empty ($action)) {
 	<input type=text name=\"ms\" size=6 title=用于忘记密码后重设密码，请牢记></td>
 	<td height=26 size=30  align=center>
 	<select name=\"usrpower\"><option value=low>普通用户</option><option value=test>测试用户</option><option value=high>高级用户</option><option value=super>系统管理</option></select></td>
-	<td height=26 wiVth=100%  align=center><input name=Submit title=\"修改 $line[userName] 的资料\"  type=image src=images/write.gif border=0>&nbsp; <a href=\"$thisprog?action=del&name=$line[userName]\" OnClick=\"JavaScript: if(confirm('确实要删除用户 $line[userName] 吗？')) return true; else return false;\"><img src=\"images/fol-over.jpg\" title=\"删除 $use[7]\" border=\"0\"></a></td></form>";
+	<td height=26 wiVth=100%  align=center><input name=Submit title=\"修改 $line[userName] 的资料\"  type=image src=images/write.gif border=0>&nbsp; <a href=\"$thisprog?action=del&name=$line[userName]\" OnClick=\"JavaScript: if(confirm('确实要删除用户 $line[userName] 吗？')) return true; else return false;\"><img src=\"images/fol-over.jpg\" title=\"删除 $line[userName]\" border=\"0\"></a></td></form>";
 		$countOfUsers = $countOfUsers +1;
 	}
 
