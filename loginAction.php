@@ -33,6 +33,7 @@ else{
  }
 }
   $_SESSION['userName'] = $userName;
+  $_SESSION['userId'] = $userBean->id;
   $_SESSION['IsLogin'] = "YES";
 
 mysql_close($link);

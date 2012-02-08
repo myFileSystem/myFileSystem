@@ -16,35 +16,40 @@ settype($page, integer);
 $perpage = 25;
 print "<tr><td bgcolor=#CBDED8 colspan=3><b>$xtm/ $title</b> </td></tr>";
 $del = $_GET['del'];
-if ($_REQUEST[del]) {
-	mysql_query("delete from user where userTo='$_SESSION[userName]'") or die (mysql_error());
+if ($_GET['del']=='all') {
+	mysql_query("delete * from sitemessage where userTo='$_SESSION[userId]'") or die (mysql_error());
 	echo "<script>alert(\"成功清空信箱！\");</script><meta http-equiv=refresh content=0;url=$thisprog>";
 	exit;
 }
 ?>
 <center><table width="95%">
        <tr>
-<table class="leasin" width="95%" border="0" cellspacing="0" cellpadding="0">
+<table  width="95%" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <td height="20">&nbsp;</td>
         </tr>
         <tr bgcolor="#DAEFE1">
           <td height="20">
 <center><a href="javascript:history.go(0)">刷新</a>  &nbsp;&nbsp;<a href="javascript:void(1)" onClick="window.open ('writemail.php','','top=100,left=0,width=700,height=465,status=no,resizable=yes,scrollbars=yes');">
-<img src="images/write.gif" border=0>发送消息</a>&nbsp;&nbsp;&nbsp;&nbsp; <a href="?del=<?="".$username.".php"?>"  OnClick="JavaScript: if(confirm('确实要清空信箱吗？')) return true; else return false;"><img src="images/fol-over.jpg" border=0>清空</a>&nbsp;&nbsp;&nbsp;&nbsp;<?
-
-if ($checkpower == super) {
-	print "<a href=javascript:void(5) onClick=\"window.open ('superwrite.php','','top=100,left=0,width=700,height=503,status=no,resizable=yes,scrollbars=yes');\"><img src=images/write.gif border=0>发送系统消息</a> ";
+<img src="images/write.gif" border=0>发送消息</a>&nbsp;&nbsp;&nbsp;&nbsp; <form><a href="<?php $thisprog ?>?del=all"  OnClick="JavaScript: if(confirm('确实要清空信箱吗？')) return true; else return false;"><img src="images/fol-over.jpg" border=0>清空</a></form>&nbsp;&nbsp;&nbsp;&nbsp;
+<?
+$query = "SELECT * FROM user where id='$_SESSION[userId]'";
+$users = mysql_query($query) or die('Query failed: ' . mysql_error());
+$line = mysql_fetch_array($users, MYSQL_ASSOC);
+if ($line[userRight] == 'super') {
+	echo "<a href=javascript:void(5) onClick=\"window.open ('superwrite.php','','top=100,left=0,width=700,height=503,status=no,resizable=yes,scrollbars=yes');\"><img src=images/write.gif border=0>发送系统消息</a> ";
 }
 ?>
 <?
+$countMessages=0;
+$messages = mysql_query("SELECT * FROM sitemessage where userTo='$_SESSION[userId]'") or die('Query failed: ' . mysql_error());
+while($line = mysql_fetch_array($users, MYSQL_ASSOC)){
+	$countMessages=$countMessages+1;
+}
+if ($countMessages!=0) {
 
-if (file_exists("$mail/" . $username . ".php")) {
-	$message_list = @ file("$mail/" . $username . ".php");
-	$countnum = count($message_list);
-	$count = $countnum;
 	if ($maxpageno <= 1)
-		echo "<p>容量/已用（$mailn/<font color=red><b>{$countnum}</b></font>）";
+		echo "<p>容量/已用（$mailn/<font color=red><b>{$countMessages}</b></font>）";
 
 	echo "&nbsp;&nbsp;信箱满后将不能接收个人消息，但可接收系统消息。";
 ?>
@@ -109,8 +114,8 @@ if (file_exists("$mail/" . $username . ".php")) {
 		}
 	}
 } else
-	echo "<br><center><font color=blue>暂无个人消息";
-include ("mydata/page.php");
+	echo "<br /><br /><br /><center><font color=blue>暂无个人消息";
+
 ?></td>
         </tr></form>
       </table>
