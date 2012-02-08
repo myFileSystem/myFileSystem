@@ -1,0 +1,5 @@
+INSERT INTO `sitemessage` (`id`, `messageFrom`, `messageTo`, `messageTitle`, `messageContent`, `messageTime`, `isFromSys`, `isRead`) VALUES (1, 3, 1, 'test', 'this is a test', '2012-3-6', '0', '0');
+INSERT INTO `sitemessage` (`id`, `messageFrom`, `messageTo`, `messageTitle`, `messageContent`, `messageTime`, `isFromSys`, `isRead`) VALUES (2, 1, 3, 'test2', 'this is a test', '2012-2-1', '1', '0');
+INSERT INTO `sitemessage` (`id`, `messageFrom`, `messageTo`, `messageTitle`, `messageContent`, `messageTime`, `isFromSys`, `isRead`) VALUES (5, 2, 3, 'seifer to squall new', 'seifer to squall new', '2012-2-8', '0', '0');
+INSERT INTO `sitemessage` (`id`, `messageFrom`, `messageTo`, `messageTitle`, `messageContent`, `messageTime`, `isFromSys`, `isRead`) VALUES (9, 3, 1, 'sysmes from squall', 'sysmes from squall', '2012-2-8', '1', '0');
+INSERT INTO `sitemessage` (`id`, `messageFrom`, `messageTo`, `messageTitle`, `messageContent`, `messageTime`, `isFromSys`, `isRead`) VALUES (10, 3, 2, 'sysmes from squall', 'sysmes from squall', '2012-2-8', '1', '0');
