@@ -13,12 +13,17 @@ if (empty ($page))
 if ($page < 1)
 	$page = 1;
 settype($page, integer);
-$perpage = 25;
+$perpage = 20;
 print "<tr><td bgcolor=#CBDED8 colspan=3><b>$xtm/ $title</b> </td></tr>";
 $del = $_GET['del'];
-if ($_GET['del']=='all') {
-	mysql_query("delete * from sitemessage where userTo='$_SESSION[userId]'") or die (mysql_error());
+if ($del == 'all') {
+	mysql_query("delete * from sitemessage where messageTo='$_SESSION[userId]'") or die(mysql_error());
 	echo "<script>alert(\"成功清空信箱！\");</script><meta http-equiv=refresh content=0;url=$thisprog>";
+	exit;
+}
+elseif (!empty ($del)) {
+	mysql_query("delete * from sitemessage where id='$del'") or die(mysql_error());
+	echo "<script>alert(\"成功删除信息！\");</script><meta http-equiv=refresh content=0;url=$thisprog>";
 	exit;
 }
 ?>
@@ -33,6 +38,8 @@ if ($_GET['del']=='all') {
 <center><a href="javascript:history.go(0)">刷新</a>  &nbsp;&nbsp;<a href="javascript:void(1)" onClick="window.open ('writemail.php','','top=100,left=0,width=700,height=465,status=no,resizable=yes,scrollbars=yes');">
 <img src="images/write.gif" border=0>发送消息</a>&nbsp;&nbsp;&nbsp;&nbsp; <form><a href="<?php $thisprog ?>?del=all"  OnClick="JavaScript: if(confirm('确实要清空信箱吗？')) return true; else return false;"><img src="images/fol-over.jpg" border=0>清空</a></form>&nbsp;&nbsp;&nbsp;&nbsp;
 <?
+
+
 $query = "SELECT * FROM user where id='$_SESSION[userId]'";
 $users = mysql_query($query) or die('Query failed: ' . mysql_error());
 $line = mysql_fetch_array($users, MYSQL_ASSOC);
@@ -41,13 +48,15 @@ if ($line[userRight] == 'super') {
 }
 ?>
 <?
-$countMessages=0;
-$messages = mysql_query("SELECT * FROM sitemessage where userTo='$_SESSION[userId]'") or die('Query failed: ' . mysql_error());
-while($line = mysql_fetch_array($users, MYSQL_ASSOC)){
-	$countMessages=$countMessages+1;
-}
-if ($countMessages!=0) {
 
+
+$countMessages = 0;
+$messages = mysql_query("SELECT * FROM sitemessage where messageTo='$_SESSION[userId]'") or die('Query failed: ' . mysql_error());
+while ($line = mysql_fetch_array($messages, MYSQL_ASSOC)) {
+	$countMessages = $countMessages +1;
+
+}
+if ($countMessages != 0) {
 	if ($maxpageno <= 1)
 		echo "<p>容量/已用（$mailn/<font color=red><b>{$countMessages}</b></font>）";
 
@@ -71,51 +80,51 @@ if ($countMessages!=0) {
         <tr bgcolor="#DAEFE1"><td >
 <?
 
-	if ($count != "") {
-		if ($count % $perpage == 0)
-			$maxpageno = $count / $perpage;
+
+	if ($countMessages != 0) {
+		if ($countMessages % $perpage == 0)
+			$maxpageno = $countMessages / $perpage;
 		else
-			$maxpageno = floor($count / $perpage) + 1;
+			$maxpageno = floor($countMessages / $perpage) + 1;
 		if ($page > $maxpageno)
 			$page = $maxpageno;
-		$pagemin = min(($page -1) * $perpage, $count -1);
-		$pagemax = min($pagemin + $perpage -1, $count -1);
-		for ($i = $pagemin; $i <= $pagemax; $i++) {
-			$detail = explode("|", $message_list[$i]);
-			if (strlen($detail[4]) >= 36) {
-				if (strlen($detail[4]) % 2 == 0)
-					$detail[4] = substr($detail[4], 0, 34) . "...";
-				else
-					$detail[4] = substr($detail[4], 0, 33) . "...";
-			}
+		$pagemin = min(($page -1) * $perpage, $countMessages -1);
+		$pagemax = min($pagemin + $perpage -1, $countMessages -1);
+		$messages = mysql_query("SELECT * FROM sitemessage where messageTo='$_SESSION[userId]'") or die('Query failed: ' . mysql_error());
+		$i = 0;
+		while ($message = mysql_fetch_array($messages, MYSQL_ASSOC)) {
+			if ($i >= $pagemin) {
 ?>
 <table width="100%" border="0" cellspacing="0" cellpadding="1">
   <tr>
-<td width="12%"><div align="left"><span>&nbsp;<?=$detail[3]?> </span></div>
-<td width="42%"><div align="left"><? if($detail[7]=="sys")echo"[<font color=#FF0000 title=系统消息>系统</font>]";?>
-<a href="mailview.php?id=<?=$detail[1];?>">
-      <?=$detail[4];?>
+<td width="12%"><div align="left"><span>&nbsp;<?php $items=mysql_query("select * from user where id='$message[messageFrom]'") or die (mysql_error()); $item=mysql_fetch_object($items); echo $item->userName; ?> </span></div>
+<td width="42%"><div align="left"><? if($message[isFromSys]==1)echo"[<font color=#FF0000 title=系统消息>系统</font>]";?>
+<a href="mailview.php?messageId=<?=$message[id];?>">
+      <?=$message[messageTitle];?>
       </a>
       <?
 
-			if (($detail[6]) == "new") {
-				echo "<img src=images/new.gif title=未阅读的个人消息>";
-			}
+
+				if (($message[isRead]) == 0) {
+					echo "<img src=images/new.gif title=未阅读的个人消息>";
+				}
 ?>
     </div>
 </div>
-<td width="21%"><div align="left"><?=$detail[2];?></div>
-<td width="13%"><div align="center"><a href="javascript:void(3)" onClick="window.open ('writemail.php?recname=<?=$detail[3]?>','','top=100,left=0,width=700,height=465,status=no,resizable=yes,scrollbars=yes');" title="给 <?=$detail[3]?> 回信"><img src="images/mail.gif" border=0></a></div></td>
-<td width="12%"> <div align="center"><a href="delmail.php?id=<?=$detail[1]?>" OnClick="JavaScript: if(confirm('确实要删除该条消息吗？')) return true; else return false;"><img src="images/fol-over.jpg" border=0></a></div></td>
+<td width="21%"><div align="left"><?=$message[messageTime];?></div>
+<td width="13%"><div align="center"><a href="javascript:void(3)" onClick="window.open ('writemail.php?recname=<?=$message[messageFrom]?>','','top=100,left=0,width=700,height=465,status=no,resizable=yes,scrollbars=yes');" title="给 <?=$message[messageFrom]?> 回信"><img src="images/mail.gif" border=0></a></div></td>
+<td width="12%"> <div align="center"><form><a href="<?php $thisprog ?>?del=<?php $message[id] ?>" OnClick="JavaScript: if(confirm('确实要删除该条消息吗？')) return true; else return false;"><img src="images/fol-over.jpg" border=0></a></form></div></td>
   </tr>
 </table>
 <?
 
+
+			}
+			$i = $i +1;
 		}
 	}
 } else
 	echo "<br /><br /><br /><center><font color=blue>暂无个人消息";
-
 ?></td>
         </tr></form>
       </table>
