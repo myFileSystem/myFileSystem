@@ -36,5 +36,5 @@ else{
   $_SESSION['IsLogin'] = "YES";
 
 mysql_close($link);
- Header("Location: index.php");
+Header("Location: index.php");/////???
 ?>

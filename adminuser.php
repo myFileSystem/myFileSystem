@@ -17,7 +17,7 @@ if (empty ($action)) {
 	$countOfUsers = 0;
 	while ($line = mysql_fetch_array($users, MYSQL_ASSOC)) {
 		$use_info .= "<tr> <form action=$thisprog?action=edit method=post>
-	<input type=hidden name=action value=\"edit\">
+    <input type=hidden  name=action value=\"edit\">
 	<input type=hidden name=oldname value=\"$use[1]\">
 	<td height=26 width=10% align=center><input type=text size=12 name=\"name\" value=\"$line[userName]\" readonly></td>
 	<td height=26 width=10% align=center>
@@ -62,7 +62,7 @@ if (empty ($action)) {
     <td width="12%" align="center"><input type=text name="usertelNew" size=15>  </td>
     <td width="14%" align="center"><input type=text name="emailNew" size=20>  </td>
     <td width="9%" align="center"><input type=text name="msNew" size=10 title=用于忘记密码后重设密码，请牢记>  </td>
-    <td width="8%" align="center"><select name="usrpowerNew"><option value=low>普通用户</option><option value=test>测试用户</option><option value=high>高级用户</option><option value=super>系统管理</option></select>
+    <td width="11%" align="center"><select name="usrpowerNew"><option value=low>普通用户</option><option value=test>测试用户</option><option value=high>高级用户</option><option value=super>系统管理</option></select>
     </td>
     <td width="13%" align="center">
     <input type=submit class=button name=Submit value="提交"></td>

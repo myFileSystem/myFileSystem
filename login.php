@@ -15,11 +15,11 @@ body {text-align:center;}
 </head>
 <body>
 <div id="all">
-    <div id="title"><img src="./reference/login_title.png" /></div>
-    <div id="main">
+ <div id="title"><img src="./reference/login_title.png" /></div>
+ <div id="main">
     	<form action="loginAction.php" method="post" >
     	<br><br>
-        <table id="login">
+        <table id="login" >
         	<tr>
             	<td>&nbsp;&nbsp;&nbsp;&nbsp;<img src="./reference/usern.png" width="100" height="20" /></td>
               <td><input type="text" value="squall" name="userName" size="32" style="background:url(./reference/username_bg.gif) left no-repeat #FFF; border:1px #ccc solid;height: 20px; font-family:Arial, Helvetica, sans-serif; font-size:14px; font-weight: 800; margin:0; padding-left: 24px;" /></td>

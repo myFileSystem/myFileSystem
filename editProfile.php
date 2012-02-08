@@ -9,6 +9,8 @@ echo "<title>$title /$xtm</title>";
 $link = mysql_connect('127.0.0.1', 'root', 'squall') or die('Could not connect: ' . mysql_error());
 mysql_select_db('app') or die('Could not select database');
 $query = "SELECT * FROM user WHERE userName='$_SESSION[userName]'";
+
+
 $users = mysql_query($query) or die('Query failed: ' . mysql_error());
 if ($users == 0) {
 	echo ("<script>alert('There is no user, please check the user name.');window.history.back();</script>");
@@ -39,7 +41,7 @@ print<<<EOT
   <tr>
     <td align="center" height="45"><div align="right">单 位</div></td>
     <td align="center">&nbsp;</td>
-    <td align="center" height="45"><div align="left"><input type=text name="userCompany" size=20 value=$line[company]></div></td>
+    <td align="center" height="45"><div align="left"><input type=text name="userCompany" nsize=20 value=$line[company]></div></td>
     <td height="45" align="center"><div align="right">联系电话</div></td>
     <td align="center">&nbsp;</td>
     <td height="45" colspan="3" align="center"><div align="left">
