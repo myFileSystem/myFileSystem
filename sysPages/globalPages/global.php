@@ -57,7 +57,7 @@ function admintitle() {
 ◇ <a href=gl.php>文件管理</a><br> <br>
 ◇ <a href="javascript:void(0)" onClick="window.open ('upfile.php','','top=0,left=0,width=700,height=363,status=no,resizable=yes,scrollbars=yes');">上传文件</a><br><br>
 ◇ <a href=jl.php>安全日志</a><br><br>
-◇ <a href=../userManage/editProfile.php>用户管理</a> <br><br>
+◇ <a href=../userManage/adminuser.php>用户管理</a> <br><br>
 ◇ <a href=../mailManage/sitemail.php>站内短信</a> <br><br>
 ◇ <a href=bfleasin.php>数据管理</a> <br><br>
 ◇ <a href=../globalPages/logout.php?login=$_SESSION[userName]><font color=red>退出系统</font></a> </p>
