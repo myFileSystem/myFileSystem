@@ -15,6 +15,7 @@ if(!isset($_SESSION['userName'])){
 }
 $link = mysql_connect('127.0.0.1', 'root', 'squall') or die('Could not connect: ' . mysql_error());
 mysql_select_db('app') or die('Could not select database');
+mysql_query("SET NAMES gb2312");
 
 admintitle();
 
@@ -52,7 +53,7 @@ function admintitle() {
 <font color=red>◇◇<a href="http://$_SERVER[SERVER_NAME]" target=_blank>TO LOCALHOST</a><br><br>
 ◇ <a href=../globalPages/mainPage.php><font color="#339900"><b>系统首页</b></font></a><br> <br>
 ◇ <a href=../userManage/editProfile.php>个人信息</a><br> <br>
-◇ <a href=wj.php>文件列表</a><br> <br>
+◇ <a href=../docManage/wj.php>文件列表</a><br> <br>
 ◇ <a href=gl.php>文件管理</a><br> <br>
 ◇ <a href="javascript:void(0)" onClick="window.open ('upfile.php','','top=0,left=0,width=700,height=363,status=no,resizable=yes,scrollbars=yes');">上传文件</a><br><br>
 ◇ <a href=jl.php>安全日志</a><br><br>

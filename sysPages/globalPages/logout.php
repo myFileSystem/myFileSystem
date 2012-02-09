@@ -81,7 +81,7 @@ print<<<EOT
   <div align="center"><font color=#000000>
     <br>
     </font><font color="blue" face="verdana">&nbsp;&nbsp;
-    </font><font color=#000000><a href="login.php"><font size=3 color=red>重新登陆</font></a></font><font color="blue">&nbsp;</font><font color="blue" face="verdana">&nbsp;
+    </font><font color=#000000><a href="../../index.php"><font size=3 color=red>重新登陆</font></a></font><font color="blue">&nbsp;</font><font color="blue" face="verdana">&nbsp;
     </font>&nbsp;&nbsp; &nbsp;&nbsp; <a href="javascript:self.close();"><font size=3 color=red>关闭浏览器 </font>
     </a> <font color=#000000><br>
     <br>
