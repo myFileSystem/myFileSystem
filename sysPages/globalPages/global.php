@@ -3,7 +3,7 @@ error_reporting(7);
 
 $userd = "use/"; //用户文件夹
 $xtm = "欢迎进入文件管理系统 ";
-$file = "C:/Apache/htdocs/file/"; //上传文件存放目录
+$file = "C:/Apache/htdocs/myFileSystem/file/"; //上传文件存放目录
 $jl = "record/"; //系统日志文件夹
 $mail = "mailbox"; //用户信箱文件夹
 $mailn = "30"; //用户信箱容量
