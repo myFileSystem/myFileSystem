@@ -245,7 +245,7 @@ echo "<script>alert(\"请选择归属分类！\");javascript:history.go(-1);</script>";
 exit();
 }
 
-if($_FILES["software"]["size"] == 0)
+if($upload_software_size == 0)
 {
 echo "<script>alert(\"安装包不能为空！\");javascript:history.go(-1);</script>";
 exit();
@@ -269,22 +269,11 @@ mysql_query($sql);
 
 mysql_close($conn);
 
-function safe_convert($s) {
-        $s=str_replace("|","│",$s);
-        $s=str_replace("<","&lt;",$s);
-        $s=str_replace(">","&gt;",$s);
-        $s=str_replace("\r","",$s);
-        $s=str_replace("\t","",$s);
-        $s=str_replace("\n","<br>",$s);
-        $s=str_replace(" ","&nbsp;",$s);
-        return $s;          }
 $picbt=trim($picbt);
-$picbt=safe_convert($picbt);
 $picsm=trim($picsm);
-$picsm=safe_convert($picsm);
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
-if (!is_uploaded_file($_FILES["software"][tmp_name]))
+if (!is_uploaded_file($_FILES["software"]["tmp_name"]))
 {
 echo "<script>alert(\"文件不存在！\");javascript:history.go(-1);</script>";
 exit;

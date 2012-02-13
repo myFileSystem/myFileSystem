@@ -4,8 +4,6 @@ $thisprog = "adminuser.php";
 require ("../globalPages/global.php");
 echo "<title>$title /$xtm</title>";
 
-$link = mysql_connect('127.0.0.1', 'root', 'squall') or die('Could not connect: ' . mysql_error());
-mysql_select_db('app') or die('Could not select database');
 $query = 'SELECT * FROM user';
 $users = mysql_query($query) or die('Query failed: ' . mysql_error());
 

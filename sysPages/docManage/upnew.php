@@ -104,14 +104,14 @@ $upload_file_name=$_FILES['software']['name'];
 $upload_file_size=$_FILES['software']['size'];
 
 if($upload_pic1){
-$file_size_max = 10000*1000;
+$file_size_max = 10000*10000;
 $store_dir = "$file/$sequence/$pic1path/";
 $accept_overwrite = 1;
 if ($upload_pic1_size > $file_size_max) {
 echo "±§Ç¸£¬ÄúµÄ½ØÍ¼1Ì«´ó";
 exit;
 }
-	$conn = mysql_connect("localhost","root","2571151");
+	$conn = mysql_connect("localhost","root","squall");
 	mysql_select_db("app",$conn);
 		if (!$conn)
 	  {
@@ -129,7 +129,7 @@ if ($upload_pic2_size > $file_size_max) {
 echo "±§Ç¸£¬ÄúµÄ½ØÍ¼2Ì«´ó";
 exit;
 }
-	$conn = mysql_connect("localhost","root","2571151");
+	$conn = mysql_connect("localhost","root","squall");
 	mysql_select_db("app",$conn);
 		if (!$conn)
 	  {
@@ -149,7 +149,7 @@ if ($upload_pic3_size > $file_size_max) {
 echo "±§Ç¸£¬ÄúµÄ½ØÍ¼3Ì«´ó";
 exit;
 }
-	$conn = mysql_connect("localhost","root","2571151");
+	$conn = mysql_connect("localhost","root","squall");
 	mysql_select_db("app",$conn);
 		if (!$conn)
 	  {
@@ -168,7 +168,7 @@ if ($upload_pic4_size > $file_size_max) {
 echo "±§Ç¸£¬ÄúµÄ½ØÍ¼4Ì«´ó";
 exit;
 }
-	$conn = mysql_connect("localhost","root","2571151");
+	$conn = mysql_connect("localhost","root","squall");
 	mysql_select_db("app",$conn);
 		if (!$conn)
 	  {
@@ -181,14 +181,14 @@ echo "<script>alert(\"Ìæ»»ÎÄ¼þ³É¹¦£¡\");javascript:window.close();</script>";exi
 
 }
 if($upload_file){
-$file_size_max = 100000*1000;
+$file_size_max = 100000*100000;
 $store_dir = "$file/$sequence/$filepath/";
 $accept_overwrite = 1;
 if ($upload_file_size > $file_size_max) {
 echo "±§Ç¸£¬ÄúµÄÎÄ¼þÌ«´ó";
 exit;
 }
-	$conn = mysql_connect("localhost","root","2571151");
+	$conn = mysql_connect("localhost","root","squall");
 	mysql_select_db("app",$conn);
 		if (!$conn)
 	  {
