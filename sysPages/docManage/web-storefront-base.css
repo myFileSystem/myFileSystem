@@ -1,0 +1,25 @@
+body{font:12px/18px "Lucida Grande","Lucida Sans Unicode",Arial,Verdana,sans-serif;background-color:#f7f8f9;color:#000;text-align:center;}
+a{color:#298cda;outline:none;}
+a:link,a:visited,a:active{text-decoration:none;}
+a:hover{text-decoration:underline;}
+p{margin-bottom:18px;}
+h1{font-weight:bold;font-size:22px;line-height:22px;margin-bottom:18px;}
+h2{font-weight:bold;font-size:1.5em;line-height:18px;margin-bottom:18px;}
+h3{font-weight:bold;font-size:1.4em;line-height:18px;}
+h4{font-weight:bold;font-size:1.4em;line-height:18px;}
+h5{font-weight:bold;font-size:1em;line-height:12px;}
+strong,b{font-weight:bold;}
+em{font-style:italic;}
+img.left{float:left;margin:2px 20px 1em 0;}
+img.right{float:right;margin:2px 0 1em 10px;}
+#main{position:relative;width:980px;height:auto;margin:0 auto;text-align:left;overflow:visible;background:none!important;}
+#globalheader{text-align:left!important;}
+#main #globalheader a{display:block;width:160px;height:24px;text-indent:-9999px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/1KI87UE5/images/itunes.png) 0 0 no-repeat;}
+#main #globalheader h2{margin:0;}
+#main #content{position:relative;width:979px;margin:0 0 18px 2px;padding:0;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;-o-border-radius:4px;-khtml-border-radius:4px;-webkit-box-shadow:rgba(0,0,0,0.3) 0 1px 3px;-moz-box-shadow:rgba(0,0,0,0.3) 0 1px 3px;background:#fff;}
+#main #content{-webkit-box-shadow:rgba(0,0,0,0.3) 0 1px 3px;-moz-box-shadow:rgba(0,0,0,0.3) 0 1px 3px;background:#fff;}
+@-moz-document url-prefix(){#main #content{border:1px solid;border-color:#e5e5e5 #dbdbdb #d2d2d2;}
+}
+#main #content{*border:1px solid;*border-color:#e5e5e5 #dbdbdb #d2d2d2;}
+#main #content:nth-child(1n){border:none;}
+#main #content .cap{display:none;}
