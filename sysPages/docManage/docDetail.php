@@ -16,7 +16,7 @@ $app = mysql_fetch_array($apps, MYSQL_ASSOC)
 <html>
 <head>
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
 
 <title><?php $app[name] ?></title>
 <link rel="stylesheet" type="text/css" href="web-storefront-base.css" />
@@ -88,3 +88,4 @@ $app = mysql_fetch_array($apps, MYSQL_ASSOC)
 </div>
 </body>
 </html>
+
