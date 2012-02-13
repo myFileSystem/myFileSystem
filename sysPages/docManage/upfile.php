@@ -78,7 +78,7 @@ $path5="$destination_folder/$sequence/$filepath"
         <font color="#FF0000">(60字符)</font> </td>
     </tr>
     <tr>
-      <td bgcolor="#DAEFE1"><div align="right">下载路径</div></td>
+      <td bgcolor="#DAEFE1"><div align="right">下载次数</div></td>
       <td width="1099" bgcolor="#DAEFE1">&nbsp;<input type="varchar(20)" name="download" size="50" maxlength="60">
         <font color="#FF0000">(60字符)</font> </td>
     </tr>
@@ -193,11 +193,11 @@ $icon = $_POST["icon"];
 $download = $_POST["download"];
 $qx=$_POST['qx'];
 $ml=$_POST['ml'];
-$truncation1 = $store_dir . $upload_pic1_name;
-$truncation2 = $store_dir . $upload_pic2_name;
-$truncation3 = $store_dir . $upload_pic3_name;
-$truncation4 = $store_dir . $upload_pic4_name;
-$software = $store_dir . $upload_software_name;
+$truncation1 = "../../file/" . $sequence."/truncation1"."/". $upload_pic1_name;
+$truncation2 = "../../file/" . $sequence."/truncation2"."/". $upload_pic2_name;
+$truncation3 = "../../file/" . $sequence."/truncation3"."/". $upload_pic3_name;
+$truncation4 = "../../file/" . $sequence."/truncation4"."/". $upload_pic4_name;
+$software = "../../file/" . $sequence."/software"."/". $upload_software_name;
 
 if($name=="")
 {
@@ -214,10 +214,7 @@ if($discription=="")
 echo "<script>alert(\"文字描述不能为空！\");javascript:history.go(-1);</script>";
 exit();
 }
-if(strlen($discription)>200){
-echo "<script>alert(\"文字描述太长！\");javascript:history.go(-1);</script>";
-exit();
-}
+
 if($categoryName=="")
 {
 echo "<script>alert(\"类型不能为空！\");javascript:history.go(-1);</script>";
@@ -259,12 +256,12 @@ if (!$conn) {
 }
 mysql_query("set names gb2312");
 mysql_select_db("app", $conn);
-$search="select * from app where sequence='$sequence'";
+
 $sql = "replace INTO app (name, sequence, size, discription, version, time, categoryName, author, price, icon, download, truncation1, truncation2, truncation3, truncation4, software)
 	VALUES
 	('$name','$sequence','$size','$discription','$version',NOW(),'$categoryName','$author','$price','$icon','$download','$truncation1','$truncation2','$truncation3','$truncation4','$software')";
 
-mysql_query($sql);
+mysql_query($sql) or die('Connection error!' . mysql_error());
 
 
 function safe_convert($s) {

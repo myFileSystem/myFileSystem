@@ -7,11 +7,10 @@ $link = mysql_connect('127.0.0.1', 'root', 'squall') or die('Could not connect: 
 mysql_select_db('app') or die('Could not select database');
 mysql_query("SET NAMES gb2312");
 
-$query = "SELECT * FROM app where sequence='1'";
-$apps = mysql_query($query) or die('Query failed: ' . mysql_error());
-$app = mysql_fetch_array($apps, MYSQL_ASSOC)
-?>
+$apps = mysql_query("SELECT * FROM app where sequence=$itemNumber") or die (mysql_error());
+$app = mysql_fetch_array($apps, MYSQL_ASSOC);
 
+?>
 
 <html>
 <head>
@@ -63,8 +62,8 @@ $app = mysql_fetch_array($apps, MYSQL_ASSOC)
 
         <div id="left-stack">
           <div rating-software="100,itunes-games" parental-rating="1" class="lockup product application">
-            <div class="artwork"><img width="155" height="155" alt="titile" class="artwork" src="<?php echo $app[truncation1]; ?>" /><span class="mask"></span></div>
-            </a> <input title="下载软件: <?php echo $app[name]; ?>" type=image src="../images/downloadButten.jpg" onclick="JavaScript:location.href='test.apk'"/>
+            <div class="artwork"><img width="155" height="155" 	alt="<?php echo $app[truncation1]; ?>" class="artwork" src="<?php echo $app[truncation1]; ?>" /><span class="mask"></span></div>
+            </a> <input title="下载软件: <?php echo $app[name]; ?>" type=image src="../images/downloadButten.jpg" onclick="JavaScript:location.href='<?php echo $app[software]; ?>'"/>
 
             <ul class="list">
               <li>

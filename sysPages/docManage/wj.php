@@ -79,7 +79,7 @@ while ($row = mysql_fetch_array($rs,MYSQL_ASSOC)){
 		<td align=center width=\"5%\" bgcolor=\"#DAEFE1\"><font size=\"2\"><strong>$row[categoryName]</strong></font></td>
 		<td align=center width=\"5%\" bgcolor=\"#DAEFE1\"><font size=\"2\"><strong>$row[author]</strong></font></td>
 		<td align=center width=\"5%\" bgcolor=\"#DAEFE1\"><font size=\"2\"><strong>$row[price]</strong></font></td>
-		<td align=center width=\"6%\" bgcolor=\"#DAEFE1\"><font size=\"2\"><strong><a href=\"javascript:void(1)\" onClick=\"window.open (\'writemail.php\',\'\',\'top=100,left=0,width=700,height=465,status=no,resizable=yes,scrollbars=yes\');\">点击查看</a</strong></font></td>
+		<td align=center width=\"6%\" bgcolor=\"#DAEFE1\"><a href=javascript:void(5) onClick=\"window.open ('docDetail.php?itemNumber=$row[sequence]','','top=100,left=0,width=700,height=503,status=no,resizable=yes,scrollbars=yes');\">点击查看</a></td>
 		</center></tr>";
 		$count=$count+1;
 }
