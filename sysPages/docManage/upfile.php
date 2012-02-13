@@ -1,7 +1,7 @@
 <?
 $thisprog="upfile.php";
 $title="上传文件";
-require("../globalPages/global.php");
+require ("../globalPages/global.php");
 //if(($checkpower!=super)&($checkpower!=high)){
 //echo "<script>alert(\"抱歉，您所在的用户组没有该权限！\");javascript:window.close();</script>";
 //exit;}
@@ -245,7 +245,7 @@ echo "<script>alert(\"请选择归属分类！\");javascript:history.go(-1);</script>";
 exit();
 }
 
-if($upload_software_size == 0)
+if($_FILES["software"]["size"] == 0)
 {
 echo "<script>alert(\"安装包不能为空！\");javascript:history.go(-1);</script>";
 exit();
@@ -267,17 +267,27 @@ $sql = "replace INTO app (name, sequence, size, discription, version, time, cate
 mysql_query($sql);
 
 
-mysql_close($conn);
-
+function safe_convert($s) {
+        $s=str_replace("|","│",$s);
+        $s=str_replace("<","&lt;",$s);
+        $s=str_replace(">","&gt;",$s);
+        $s=str_replace("\r","",$s);
+        $s=str_replace("\t","",$s);
+        $s=str_replace("\n","<br>",$s);
+        $s=str_replace(" ","&nbsp;",$s);
+        return $s;          }
 $picbt=trim($picbt);
+$picbt=safe_convert($picbt);
 $picsm=trim($picsm);
+$picsm=safe_convert($picsm);
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
-if (!is_uploaded_file($_FILES["software"]["tmp_name"]))
-{
-echo "<script>alert(\"文件不存在！\");javascript:history.go(-1);</script>";
-exit;
-}
+//if (!is_uploaded_file($_FILES["software"][tmp_name]))
+//{
+//echo "<script>alert(\"文件不存在！\");javascript:history.go(-1);</script>";
+//exit;
+//}
 $file1 = $_FILES["truncation1"];
 $file2 = $_FILES["truncation2"];
 $file3 = $_FILES["truncation3"];
@@ -308,6 +318,7 @@ $file = $_FILES["software"];
  echo "<script>alert(\"文件安装包太大，超过100M！\");javascript:history.go(-1);</script>";
  exit;
   }
+  /*
 if(!in_array($file1["type"], $uptypes))
 {
  echo "<script>alert(\"截图1类型不允许！\");javascript:history.go(-1);</script>";
@@ -328,6 +339,8 @@ if(!in_array($file4["type"], $uptypes))
  echo "<script>alert(\"截图4类型不允许！\");javascript:history.go(-1);</script>";
  exit;
 }
+*/
+
 if(!file_exists("$destination_folder/$sequence"))
 mkdir("$destination_folder/$sequence");
 $filename1=$file1["tmp_name"];
@@ -350,11 +363,7 @@ $image_size4 = getimagesize($filename);
 $pinfo4=pathinfo($file4["name"]);
 $ftype4=$pinfo[extension];
 $destination4 = $destination_folder.time().".".$ftype4;
-$filename=$file["tmp_name"];
-$image_size = getimagesize($filename);
-$pinfo=pathinfo($file["name"]);
-$ftype=$pinfo[extension];
-$destination = $destination_folder.time().".".$ftype;
+
 ?>
 <?php
 
@@ -407,6 +416,7 @@ exit;
 
 move_uploaded_file($_FILES["truncation1"]["tmp_name"],
 "$destination_folder/$sequence/$pic1path" . $_FILES["truncation1"]["name"]);
+
 echo "Stored truncation1 in: " . "$destination_folder/$sequence/$pic1path" . $_FILES["truncation1"]["name"]. "<br />";
 move_uploaded_file($_FILES["truncation2"]["tmp_name"],
 "$destination_folder/$sequence/$pic2path" . $_FILES["truncation2"]["name"]);
@@ -420,7 +430,7 @@ move_uploaded_file($_FILES["truncation4"]["tmp_name"],
 "$destination_folder/$sequence/$pic4path" . $_FILES["truncation4"]["name"]);
 echo "Stored truncation4 in: " . "$destination_folder/$sequence/$pic4path" . $_FILES["truncation4"]["name"]. "<br />";
 
-move_uploaded_file($_FILES["software"]["tmp_name"],
+		 	move_uploaded_file($_FILES["software"]["tmp_name"],
 "$destination_folder/$sequence/$filepath" . $_FILES["software"]["name"]);
 echo "Stored software in: " . "$destination_folder/$sequence/$filepath" . $_FILES["software"]["name"]. "<br />";
 

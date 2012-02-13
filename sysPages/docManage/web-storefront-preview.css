@@ -1,0 +1,341 @@
+
+#main #content h1 ul{zoom:1;}
+#main #content h1 ul:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+#main #content h1 ul li{float:left;margin-right:5px;color:#474747;}
+#main #content h1 ul li a{display:inline;color:#474747;}
+#main #content .padder{margin:0;padding:35px 40px 5px;zoom:1;}
+#main #content .padder:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+#main #content .padder #media-type-nav{margin:0 -19px 35px;padding:0 20px 35px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/horizon.png) 0 100% no-repeat;zoom:1;}
+#main #content .padder #media-type-nav:after,#main #content .padder #media-type-nav ul:after{content:" ";display:block;clear:both;float:none;}
+#main #content .padder #media-type-nav ul{display:block;list-style:none;margin:-10px 0 0;zoom:1;}
+#main #content .padder #media-type-nav li{display:block;float:left;width:inherit;height:38px;line-height:22px;vertical-align:middle;margin-right:60px;}
+#main #content .padder #media-type-nav li.music,#main #content .padder #media-type-nav li.music.selected{margin-left:-30px;padding-left:30px;}
+#main #content .padder #media-type-nav li.ebook{margin-right:0;}
+#main #content .padder #media-type-nav li a{display:block;height:24px;line-height:24px;font-size:22px;font-weight:bold;vertical-align:middle;padding:7px 0;color:#298cda;}
+#main #content .padder #media-type-nav li a:hover,#main #content .padder #media-type-nav li.selected a{color:#474747;text-decoration:none;}
+#main #content .padder #media-type-nav li.selected{margin-left:-30px;padding-left:30px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/browse_selected_big_left.png) 0 0 no-repeat;}
+#main #content .padder #media-type-nav li.selected a{padding-right:30px;margin-right:-30px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/browse_selected_big_right.png) 100% 0 no-repeat;}
+#main #content .padder #media-type-nav ul.sub-section{margin-top:20px;}
+#main #content .padder #media-type-nav ul.sub-section li a{font-size:16px;line-height:20px;}
+#main #content .padder #media-type-nav ul.sub-section li.selected{margin-left:-20px;padding-left:20px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/browse_selected_small_left.png) 0 0 no-repeat;}
+#main #content .padder #media-type-nav ul.sub-section li.selected a{padding-right:20px;margin-right:-20px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/browse_selected_small_right.png) 100% 0 no-repeat;}
+#main #content .padder .intro{clear:both;margin-top:-6px;margin-bottom:2.5em;}
+#main #content .padder .intro h2{font-size:1.5em;margin-bottom:.5em;color:#474747;}
+#main #content .padder .intro p{margin-bottom:0;font-size:1.2em;color:#767676;}
+#main #content #selectedgenre{float:right;width:683px;margin-left:24px;}
+#main #content #selectedgenre.grid-4-column{float:none;width:100%;margin:0 0 35px;zoom:1;}
+#main #content #selectedgenre.grid-4-column:after{content:" ";float:none;clear:both;display:block;}
+#main #content #genre-nav{float:left;width:190px;}
+#main #content #genre-nav.main{float:none;width:auto;margin-bottom:20px;}
+#main #content #genre-nav.main div>ul>li{margin-bottom:0;}
+#main #content #genre-nav.main div>ul>li>ul{margin-bottom:18px;}
+#main #content .nav ul li ul{margin:0 0 2em 14px;}
+#main #content .nav ul li a{display:block;max-width:180px;line-height:1.7em;font-size:1.2em;margin-bottom:0;font-weight:bold;}
+#main #content .nav ul li a.top-level-genre{white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+#main #content .nav ul li{display:block;}
+#main #content .nav ul li ul li a{color:#298cda;line-height:18px;font-size:1em;font-weight:normal;padding-right:0;background:0;}
+#main #content #genre-nav.nav div.grid3-column ul li{margin-bottom:16px;}
+#main #content #genre-nav.nav div.grid3-column ul li a{max-width:200px;}
+#main #content div.grid4-column ul li a{max-width:200px;}
+#main #content #genre-nav.nav ul li a.selected{display:block;min-height:23px;width:173px;padding:0 10px 0 8px;color:#575757;margin:3.8px 0 0 -8px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/genrenav_selectedbg.png) 0 0 no-repeat;text-decoration:none;cursor:default;}
+#main #content #genre-nav.nav div.grid3-column ul li ul{display:block;margin-bottom:0;}
+#main #content #genre-nav.nav div.grid3-column ul li ul li{margin:0;}
+#main #content #genre-nav.nav div.grid4-column ul li ul{display:block;margin-bottom:0;}
+#main #content #genre-nav.nav div.grid4-column ul li ul li{margin:0;}
+#main #content #genre-nav.nav ul li ul li a{margin:0;padding:0;background:0;}
+#main #content #genre-nav.nav ul li ul li a.selected{display:block;min-height:23px;width:165px;padding:3px 10px 1px 16px;margin:.4em 0 0 -16px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/genrenav_selectedbg.png) 0 0 no-repeat;text-decoration:none;cursor:default;}
+#main #content #title .preorder-badge{float:left;margin-right:15px;}
+#main #content #title div.right{display:inline-block;*display:inline;float:right;}
+#main #content #title div.left{float:left;}
+#main #content #title a.itunes-lp{display:block;height:30px;margin:10px 0 0;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/itunes-lp-badge.png) 100% 0 no-repeat;text-indent:-9999px;}
+#main #content #title h1{display:inline-block;*display:inline;max-width:100%;color:#474747;line-height:28px;}
+#main #content #title h2{clear:both;display:block;margin-bottom:6px;font-size:17px;line-height:24px;font-weight:bold;color:#595959;}
+#main #content #title a.view-in-itunes,#main #content #title a.view-in-appstore{display:inline-block;margin:0 0 0 25px;line-height:28px;background:none;}
+#main #content #title p{clear:both;}
+#main #content #title span.format,#main #content #title span.edition,body.tv.video #main #content #title span.content-rating{display:inline-block;margin:0 0 0 10px;vertical-align:middle;*margin-top:8px;}
+#main #content #title span.edition{vertical-align:top;}
+#main #content #title span.format.cc{display:inline-block;padding-top:1px;width:20px;height:16px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/cc_badge_large.png);text-indent:-9999px;}
+body.video #main #content #title span.content-rating{margin:0 25px 0 0;vertical-align:inherit;color:#fff;}
+#main #content #left-stack{float:left;width:190px;}
+#main #content #left-stack>div{margin-bottom:27px;}
+#main #content div.product-extras div.extra-list{margin-top:40px;}
+#main #content div.bundles-list ol{list-style-type:none;}
+#main #content div.extra-list ul.lockups>li,#main #content div.bundles-list ol>li{margin-bottom:17px;}
+#main #content div.extra-list ul.list>li div.lockup{margin-bottom:17px;}
+#main #content div.extra-list ul.list>li>a{display:block;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+#main #content div.product-extras div.extra-list ul.list>li div.lockup{margin:0;}
+#main #content #left-stack div.artwork,#main #content #left-stack div.lockup,#main #content #left-stack div.lockup-info,#main #content #left-stack div.genres,#main #content #left-stack div.bio-stats{margin-top:0;}
+div.bio-stats h5{margin-bottom:6px;}
+#main #content #left-stack div.genres{margin-bottom:1em;}
+#main #content #left-stack div.lockup ul.list li.copyright{width:170px;overflow:hidden;text-overflow:ellipsis;}
+#main #content #left-stack div.fat-binary-blurb{margin-bottom:12px;}
+#main #content #left-stack div.fat-binary-blurb:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+#main #content #left-stack div.fat-binary-blurb span.fat-binary-badge{display:block;float:left;width:14px;height:14px;margin-right:5px;margin-top:2px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/fat-binary-badge-web.png) 0 0 no-repeat;text-indent:-9999px;}
+#main #content #left-stack div h4{margin-bottom:10px;}
+#main #content #left-stack div.lockup .list .price{color:#515151;font-weight:bold;display:block;margin-bottom:.3em;}
+#main #content #title a.view-in-itunes span,#main #content #left-stack a.view-in-itunes{margin:12px 0;}
+#main #content #left-stack div.select{margin:16px 0;}
+#main #content #left-stack div.select select{width:174px;}
+#main #content #title a.view-in-itunes span,#main #content #left-stack a.view-in-itunes span{display:block;width:106px;height:23px;margin:0;text-indent:-9999px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/viewinitunes_en.png) 0 0 no-repeat;}
+body.geo-de #main #content #title a.view-in-itunes span,body.geo-ch #main #content #title a.view-in-itunes span,body.geo-at #main #content #title a.view-in-itunes span,body.geo-de #main #content #left-stack a.view-in-itunes span,body.geo-at #main #content #left-stack a.view-in-itunes span,body.geo-ch #main #content #left-stack a.view-in-itunes span{width:126px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/viewinitunes_de.png) 0 0 no-repeat;}
+body.geo-nl #main #content #title a.view-in-itunes span,body.geo-nl #main #content #left-stack a.view-in-itunes span{width:114px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/viewinitunes_nl.png) 0 0 no-repeat;}
+body.geo-es #main #content #title a.view-in-itunes span,body.geo-mx #main #content #title a.view-in-itunes span,body.geo-es #main #content #left-stack a.view-in-itunes span,body.geo-mx #main #content #left-stack a.view-in-itunes span{width:101px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/viewinitunes_es.png) 0 0 no-repeat;}
+body.geo-fr #main #content #title a.view-in-itunes span,body.geo-fr #main #content #left-stack a.view-in-itunes span{width:132px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/viewinitunes_fr.png) 0 0 no-repeat;}
+body.geo-it #main #content #title a.view-in-itunes span,body.geo-it #main #content #left-stack a.view-in-itunes span{width:137px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/viewinitunes_it.png) 0 0 no-repeat;}
+body.geo-jp #main #content #title a.view-in-itunes span,body.geo-jp #main #content #left-stack a.view-in-itunes span{width:95px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/viewinitunes_jp.png) 0 0 no-repeat;}
+body.geo-br #main #content #title a.view-in-itunes span,body.geo-br #main #content #left-stack a.view-in-itunes span{width:100px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/viewinitunes_pt-br.png) 0 0 no-repeat;}
+#main #content #left-stack ul.list li a.view-in-itunes,#main #content #left-stack ul.list li a.view-in-appstore{display:inline;margin:0;padding-right:8px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/more.gif) 100% 50% no-repeat;}
+#main #content #left-stack ul.list li a.view-in-itunes span,#main #content #left-stack ul.list li a.view-in-appstore span{display:inline;text-indent:0;background:none;}
+#main #content div.alpha{margin:0 9px 1em 0;z-index:2;}
+#main #content ul.alpha,#main #content ul.paginate{position:relative;zoom:1;z-index:1;}
+#main #content ul.paginate{margin-bottom:1em;}
+#main #content ul.alpha:after,#main #content ul.paginate:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+#main #content ul.alpha{margin-bottom:1em;}
+#main #content ul.alpha li{display:inline;float:left;margin-right:9px;}
+#main #content div.alpha a,#main #content ul.alpha li a{font-size:1.2em;font-weight:bold;}
+#main #content ul.paginate li{display:inline;margin-right:9px;}
+#main #content ul.paginate li a{font-size:1.2em;}
+#main #content div.alpha a.selected,#main #content ul.alpha li a.selected,#main #content ul.paginate li a.selected{color:#898989;text-decoration:none;cursor:default;}
+#main #content #selectedgenre #selectedcontent{padding:2.5em 0;margin:0;border-top:1px solid #ececec;}
+#main #content #selectedgenre #selectedcontent ul li a{display:inline-block;max-width:100%;*display:block;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+#main #content div.center-stack div.lockup-container{margin-bottom:0;zoom:1;}
+#main #content div.center-stack>div{zoom:1;}
+#main #content div.center-stack>div:after,#main #content div.lockup-container:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+#content #title{position:relative;margin-bottom:18px;zoom:1;}
+#content #title:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+#content #title h2 a{font-weight:bold;color:#595959;}
+#content #title .view-more{position:relative;min-width:90px;max-width:210px;font-weight:bold;margin:10px 0 0;z-index:1;writing-mode:lr-tb;}
+#content #title .view-genre-in-client{position:relative;float:right;min-width:90px;max-width:310px;margin:10px 0 0;z-index:1;writing-mode:lr-tb;padding-right:8px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/more.gif) 100% 50% no-repeat;}
+#content #title.has-gcbadge .view-more{margin-top:0;}
+body.video #content #title span.package-sticker{display:block;height:30px;margin:15px 0 0;text-indent:-9999px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/package-sticker-30.png) 100% 0 no-repeat;}
+#content div.artwork{position:relative;zoom:1;}
+#content #left-stack .lockup.product.movie div.artwork{min-height:180px;}
+#content div.artwork:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+#content div.artwork img.artwork{max-width:190px;height:auto;border:1px solid #fff;-webkit-box-shadow:0 3px 5px rgba(0,0,0,0.3);-moz-box-shadow:rgba(0,0,0,0.3) 0 3px 5px;border-color:#a2a2a2\9;}
+#content a.more,#content a.see-all,#content a.view-in-itunes,#content a.view-in-appstore{display:inline-block;padding-right:8px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/more.gif) 100% 50% no-repeat;}
+body #content li.itunes-plus{display:none;}
+body.geo-jp #content span.price.itunes-plus,body.geo-jp #content td.price span.itunes-plus,body.geo-jp.preorder #content td.price span{display:block;padding-left:20px;color:#898989;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/plus.png) 0 50% no-repeat;}
+body.geo-jp #content td.price{max-width:88px!important;}
+#main #content #left-stack div.rating{margin:0;}
+#main #content #left-stack div.rating div{float:left;width:inherit;margin:2px 5px 0 0;}
+#main #content div.customer-review h5{color:#898989;}
+#main #content div.customer-review div.rating{display:inline-block;*display:inline;margin:2px 0 0 5px;zoom:1;}
+#main #content div.customer-review span.user-info{display:block;margin:2px 0 10px;}
+#main #content div.rating div span.rating-star{display:block;float:left;width:11px;height:11px;margin-right:2px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/rating_star.png) 0 0 no-repeat;}
+#main #content div.rating div span.rating-star.half,#main #content div.rating div span.half{width:6px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/rating_star_half.png) 0 0 no-repeat;}
+#main #content div.rating div span.rating-star.ghost,#main #content div.rating div span.ghost{position:absolute;width:0;margin:0;background:none;}
+#main #content .center-stack{clear:right;float:right;width:683px;}
+#main #content.single-column .center-stack{float:none;width:100%;}
+#main #content .center-stack h3,#main #content .center-stack h4{color:#474747;}
+#main #content .center-stack span,#main #content .center-stack p{color:#898989;}
+#main #content .center-stack a,#main #content .center-stack a span{color:#298cda;}
+#main #content .center-stack div.biography{margin-bottom:20px;color:#898989;}
+#main #content .center-stack div#biography{margin-top:0;}
+#main #content .center-stack div.biography h4{font-size:1.4em;font-weight:bold;}
+#main #content .center-stack div.biography p.born-or-formed,#main #content .center-stack div.biography p.genres{margin:0;}
+#main #content .center-stack div.biography span.label{font-weight:bold;}
+#main #content .center-stack div.top-albums,#main #content .center-stack div.top-songs{clear:both;width:700px;margin-left:-16px;text-align:center;}
+#main #content .center-stack div.top-albums div.content>div{width:700px;zoom:1;}
+#main #content.single-column .center-stack div.top-albums div.content>div{width:100%;}
+#main #content .center-stack div.top-albums>div,#main #content .center-stack div.top-songs>div{text-align:left;}
+#main #content .center-stack div.track-list{margin-bottom:40px;}
+#main #content .center-stack div.listeners-also-bought div.track-list{margin-bottom:0;}
+#main #content .center-stack div.track-list table{width:668px;text-align:left;border-collapse:collapse;}
+#main #content.single-column .center-stack div.track-list table{width:100%;}
+#main #content .center-stack div.track-list.album.music,body.software #main #content .center-stack div.product-review,#main #content .center-stack>div.top-albums-and-songs,#main #content .center-stack>div.listeners-also-bought{margin-bottom:30px;padding-bottom:16px;zoom:1;}
+
+
+#main #content .center-stack div.swoosh{padding-bottom:16px;zoom:1;}
+#main #content .center-stack div.swoosh div.lockup-info>a{display:block;}
+#main #content .center-stack div.swoosh div.content{zoom:1;}
+#main #content .center-stack div.top-albums-and-songs div.swoosh div.title,#main #content .center-stack div.listeners-also-bought div.swoosh div.title,#main #content .center-stack div.top-albums div.swoosh div.title{display:none;}
+#main #content .center-stack div.top-albums-and-songs div.track-list,#main #content .center-stack div.listeners-also-bought div.track-list{padding-top:0;}
+#main #content .center-stack div.title a.see-all{display:none;}
+#main #content .center-stack div>div.title{display:block;padding:14px 0 0 16px;}
+#main #content .center-stack div>div.title h2{color:#474747;text-align:left;}
+#main #content .center-stack div.swoosh div.content:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+#main #content .center-stack a.artwork-link{display:block;position:relative;cursor:pointer;}
+#main #content .center-stack div.artwork{margin-bottom:0;}
+#main #content .center-stack div h4{margin-bottom:8px;}
+#main #content .center-stack div h5 div.rating{margin-top:6px;}
+#main #content .center-stack div.lockup-info ul li{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+#main #content .center-stack div.lockup-info ul li>a.view-in-itunes,#main #content .center-stack div.lockup-info ul li>a.view-in-appstore{display:inline-block;max-width:92%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+#main #content .center-stack .lockup{position:relative;display:block;float:left;margin-bottom:0!important;width:121px;padding-left:18px;text-align:left;}
+#main #content .center-stack .top-albums .lockup,#main #content .center-stack .top-albums-and-songs .lockup{width:112px;}
+#main #content.single-column .center-stack .top-albums .lockup,#main #content.single-column .center-stack .top-albums-and-songs .lockup{width:158px;}
+#main #content .center-stack .top-songs .track-list,#main #content .center-stack .top-albums-and-songs .track-list{margin-bottom:16px;}
+#main #content .center-stack .lockup div.artwork{height:100px;}
+#main #content .center-stack .lockup.music-video div.artwork{height:75px;}
+#main #content .center-stack .lockup.movie div.artwork{height:140px;}
+#main #content .center-stack div.top-albums .lockup{padding-bottom:16px;}
+#main #content .center-stack div.top-albums .lockup,#main #content .center-stack div.top-albums-and-songs .lockup{padding-left:24px;}
+#main #content .center-stack div.top-albums{zoom:1;}
+#main #content .center-stack div.top-albums>div.swoosh{padding-bottom:0;}
+#main #content .center-stack div.top-albums:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+#main #content .center-stack div.top-albums div.content{zoom:1;}
+#main #content .center-stack div.top-albums div.content:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+#main #content .center-stack div.swoosh div.artwork img.artwork{position:absolute;bottom:0;}
+#main #content .center-stack div.content div.lockup div.lockup-info{position:relative;margin-top:8px;}
+#main #content .center-stack div.content div.lockup div.lockup-info span.index{position:absolute;top:-24px;left:-27px;}
+#main #content .center-stack div.content div.lockup div.lockup-info span.index span{display:block;width:22px;text-align:right;font-size:10px;}
+#main #content .center-stack div.content div.lockup div.lockup-info a.artist,#main #content .center-stack div.content div.lockup div.lockup-info a.album{display:inline-block;width:112px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+#main #content .center-stack div.content div.lockup div.lockup-info a.artist{display:block;}
+#main #content .center-stack div.top-songs,#main #content .center-stack div.top-albums{margin-bottom:36px;}
+#main #content .center-stack div.top-albums h3,#main #content .center-stack div.top-albums-and-songs h3,#main #content .center-stack div.listeners-also-bought h4{padding:14px 0 16px 16px;margin:0;text-align:left;}
+#main #content .center-stack div.top-songs h3{padding:14px 0 0 16px;margin:0;text-align:left;}
+#main #content .center-stack>div.top-albums,#main #content .center-stack>div.top-songs,#main #content .center-stack>.top-albums-and-songs,#main #content .center-stack>.listeners-also-bought,#main #content .center-stack>div.swoosh,#main #content .center-stack div.movie-review-container,#main #content .center-stack>.track-list,#main #content .center-stack .stack-section .track-list{width:700px;margin-left:-16px;background-color:#f7f7f7;z-index:0;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;-o-border-radius:4px;zoom:1;}
+#main #content.single-column .center-stack>div.top-albums,#main #content.single-column .center-stack>div.top-songs,#main 
+
+#main #content #title .view-trailer{display:inline-block;height:22px;*float:left;line-height:22px;padding-left:14px;margin:8px 0 0 25px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/preview_button_left.png) 0 0 no-repeat;cursor:pointer;}
+#main #content #title .view-trailer span{display:inline-block;height:22px;line-height:22px;padding-right:14px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/preview_button_right.png) 100% 0 no-repeat;font-size:13px;color:#000;text-shadow:0 1px 1px #c2c2c2;}
+#main #content #left-stack div.app-rating{margin-bottom:2em;}
+#main #content #left-stack span.app-requirements{font-weight:bold;}
+#main #content #left-stack div.in-app-purchases ol.list{list-style-position:inside;}
+#main #content #left-stack div.in-app-purchases ol.list li{white-space:nowrap;}
+#main #content #left-stack div.in-app-purchases ol.list li,#main #content #left-stack div.in-app-purchases ol.list li span{height:18px;line-height:18px;vertical-align:bottom;}
+#main #content #left-stack div.in-app-purchases span.index{display:inline-block;width:15px;text-align:right;}
+#main #content #left-stack div.in-app-purchases span.in-app-title{display:inline-block;width:125px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+#main #content #left-stack div.in-app-purchases span.price{max-width:45px;white-space:nowrap;}
+#main #content #left-stack div.more-by>ul.list{margin-top:12px;}
+#main #content #left-stack div.more-by>ul.list>li{margin-bottom:10px;}
+#main #content div.center-stack .truncate{overflow:hidden;}
+#main #content div.center-stack a.more-link{display:inline-block;float:right;margin-bottom:-18px;}
+#main #content div.center-stack div.app-links{max-width:600px;margin-top:-48px;margin-bottom:30px;}
+#main #content div.center-stack div.app-links a{display:inline;font-weight:bold;margin-right:12px;}
+#main #content .center-stack div.lockup-container.application{clear:both;width:700px;margin-left:-16px;}
+#main #content div#left-stack div.customer-ratings>div{margin-top:5px;}
+#main #content div#left-stack div.customer-ratings>div.rating{margin-top:0;}
+#main #content div#left-stack div.lockup.application div.artwork{position:relative;}
+#main #content div#left-stack div.lockup.product.application div.artwork{height:180px;}
+#main #content div.lockup.application div.artwork>img.artwork,#main #content div.lockup.course div.artwork>img.artwork{position:relative;z-index:0;-webkit-box-shadow:none;-moz-box-shadow:none;border:none;}
+#main #content div.lockup.application div.artwork>span.mask{display:block;position:absolute;top:0;left:-1px;z-index:1;width:177px;height:179px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/mask175.png) 0 0 no-repeat;}
+#main #content div#left-stack div.lockup.application.small div.artwork>img.artwork{width:60px;height:60px;}
+#main #content div#left-stack div.lockup.application.small div.artwork>span.mask{width:62px;height:63px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/mask60.png) 0 0 no-repeat;}
+#main #content div#left-stack div.lockup.product.application.newsstand div.artwork{height:auto;}
+#main #content div.lockup.application.newsstand div.artwork>span.mask{display:none;}
+#main #content div#left-stack div.lockup.application.newsstand.small div.artwork>img.artwork{width:auto;height:auto;}
+#main #content div#left-stack div.lockup.application.newsstand.small div.artwork>span.mask{display:none;}
+#main #content #left-stack div.lockup.application>a:hover{text-decoration:none;}
+#main #content div.center-stack div.application{margin-bottom:2em;zoom:1;}
+#main #content div.center-stack div.application:after{display:block;content:" ";float:none;clear:both;height:1px;}
+#main #content div.center-stack div.application>div.title a.see-all{display:none;}
+#main #content div.center-stack div.screenshots div.content{clear:both;position:relative;width:auto;min-height:320px;max-height:520px;margin:0 14px;padding-bottom:16px;white-space:nowrap;overflow-x:auto;overflow-y:hidden;-webkit-user-select:none;}
+#main #content div.center-stack div.screenshots div.content:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+#main #content div.center-stack div.screenshots div.content>div{position:relative;zoom:1;width:5000px;}
+#main #content div.center-stack div.screenshots div.content::-webkit-scrollbar{height:8px;}
+#main #content div.center-stack div.screenshots div.content::-webkit-scrollbar-track:horizontal{-webkit-border-image:url(images/horiz_track_well.png) 0 8 0 8;border-width:0 8px;}
+#main #content div.center-stack div.screenshots div.content::-webkit-scrollbar-thumb:horizontal{-webkit-border-image:url(images/horiz_track_thumb.png) 0 8 0 8;border-width:0 8px;}
+#main #content div.center-stack div.screenshots div.content>div:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+#main #content div.center-stack div.screenshots div.content>div>div.lockup{float:left;width:auto;margin:0 13px 0 4px;padding:0;}
+#main #content div.center-stack div.screenshots div.content>div>div. lockup:last-child{margin-left:0;}
+#main #content div.center-stack div.screenshots div.content>div>div.lockup>img{margin:0 3px;border:1px solid #fff;-webkit-box-shadow:0 3px 5px rgba(0,0,0,0.3);-moz-box-shadow:#999 0 3px 5px;border-color:#a2a2a2\9;}
+#main #content div.center-stack div.screenshots div.content .control{clear:both;margin:16px 0 0 5px;padding:0;position:static!important;height:9px;width:98%!important;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/track_well.gif) no-repeat 0 0;}
+#main #content div.center-stack div.screenshots div.content .control .control_cap{background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/track_well.gif) no-repeat 100% 0;width:100%;height:100%;padding-left:3px;position:relative;left:3px;}
+#main #content div.center-stack div.screenshots div.content .control .scroll{background-color:#08C;cursor:pointer;position:relative;width:20%;height:9px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/track_thumb.png) no-repeat 0 0;margin-left:-6px;}
+#main #content div.center-stack div.screenshots div.content .control .scroll_cap{background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/track_thumb.png) no-repeat 100% 0;width:100%;height:100%;padding-left:3px;position:relative;left:3px;cursor:pointer!important;}
+#main #content div.center-stack div.screenshots>div.title>h2{float:left;}
+#main #content div.center-stack div.screenshots>div.title>div.pill{display:block;float:right;}
+#main #content div.center-stack div.screenshots>div.title>div.pill>a{display:inline-block;*display:inline;height:11px;line-height:11px;margin-right:5px;padding-right:5px;color:#298cda;cursor:pointer;zoom:1;}
+#main #content div.center-stack div.screenshots>div.title>div.pill>a.first{border-right:1px solid #474747;}
+#main #content div.center-stack div.screenshots>div.title>div.pill>a:hover{text-decoration:none;}
+#main #content div.center-stack div.screenshots>div.title>div.pill>a.active{color:#474747;}
+#main #content div.center-stack div.screenshots>div.toggle div.content.ipad{margin-top:15px;display:none;}
+#main #content div.center-stack div.lockup.application.small div.artwork>img.artwork{border:none;-webkit-box-shadow:none;-moz-box-shadow:none;}
+#main #content div.center-stack div.lockup.application.small div.artwork>span.mask{width:102px;height:103px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/mask100blue.png) 0 0 no-repeat;}
+#main #content div.center-stack div.swoosh div.lockup.application.small div.artwork>span.mask{background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/mask100gray.png) 0 0 no-repeat;}
+#main #content .track-list table tr td span.episode-info{display:block;float:right;width:19px;height:19px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/description_i.png) 0 -19px no-repeat;}
+#main #content .track-list table tr td span.episode-info:hover{cursor:pointer;background-position:0 0;}
+#main #content div.center-stack div.primary-blurb,#main #content div.center-stack div.product-review.blurb{padding-bottom:0;}
+#main #content div.center-stack div.primary-blurb p,#main #content div.center-stack div.product-review.blurb p{margin-bottom:0;}
+#main #content div.center-stack div.primary-blurb p.truncate{max-height:54px;}
+#main #content div.center-stack>div.lockup-container.podcast.large{margin-bottom:30px;}
+#hide_hud{position:fixed;top:0;left:0;display:none;width:100%;height:100%;z-index:9;}
+#description_hud{position:absolute;display:none;width:256px;height:154px;padding:24px 24px 40px 40px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/descriptionbg.png) 0 0 no-repeat;zoom:1;z-index:10;text-align:left;}
+#description_hud:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+#description_hud a.close_link{position:absolute;top:12px;left:18px;display:block;float:left;width:19px;height:17px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/closebtn.png) 0 0 no-repeat;text-indent:-9999px;}
+#description_hud a.close_link:hover{background-position:0 -18px;}
+#description_hud a.close_link:active{background-position:0 -36px;}
+#description_hud div.scroller{position:absolute;right:23px;top:30px;left:-9999px;width:8px;height:154px;z-index:11;}
+#description_hud div.scroller div.track_well{width:100%;height:100%;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/vert_track_well.png) 0 0 no-repeat;}
+#description_hud div.scroller div.track_well_cap{position:relative;width:100%;height:100%;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/vert_track_well.png) 0 100% no-repeat;}
+#description_hud div.scroller div.track_thumb{position:relative;cursor:pointer;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/vert_track_thumb.png) 0 100% no-repeat;}
+#description_hud div.scroller div.track_thumb_cap{position:relative;width:100%;height:100%;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/vert_track_thumb.png) 0 0 no-repeat;}
+#description_hud div.content_wrapper{position:relative;max-height:154px;width:232px;padding-right:24px;overflow-x:hidden;overflow-y:auto;z-index:10;}
+#description_hud div.content_wrapper::-webkit-scrollbar{width:8px;}
+#description_hud div.content_wrapper::-webkit-scrollbar:horizontal{display:none;}
+#description_hud div.content_wrapper::-webkit-scrollbar-track:vertical{-webkit-border-image:url(images/vert_track_well.png) 8 0 8 0;border-width:8px 0;min-height:154px;}
+#description_hud div.content_wrapper::-webkit-scrollbar-thumb:vertical{-webkit-border-image:url(images/vert_track_thumb.png) 8 0 8 0;border-width:8px 0;min-height:20px;}
+#description_hud div.content_wrapper div.content{position:relative;}
+#description_hud div.content_wrapper div.content h2{margin:0;font-size:14px;color:#474747;}
+#description_hud div.content_wrapper div.content p.release_date{margin-bottom:8px;}
+#description_hud div.content_wrapper div.content p.release_date span.release_date_label{margin-right:4px;}
+#description_hud div.content_wrapper div.content p.description{margin:0;}
+body.video #description_hud{color:#898989;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/descriptionbg_dark.png) 0 0 no-repeat;}
+body.video #description_hud div.content_wrapper div.content h2{color:#fff;}
+body.video #description_hud a.close_link{top:15px;left:17px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/closebtn_dark.png) 0 0 no-repeat;}
+body.video #description_hud div.scroller{width:10px;right:21px;}
+body.video #description_hud div.scroller div.track_well{background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/vert_track_well_dark.png) 0 0 no-repeat;}
+body.video #description_hud div.scroller div.track_well_cap{background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/vert_track_well_dark.png) 0 100% no-repeat;}
+body.video #description_hud div.scroller div.track_thumb{background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/vert_track_thumb_dark.png) 0 100% no-repeat;}
+body.video #description_hud div.scroller div.track_thumb_cap{background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/vert_track_thumb_dark.png) 0 0 no-repeat;}
+body.video #description_hud div.content_wrapper::-webkit-scrollbar-track:vertical{-webkit-border-image:url(images/vert_track_well_dark.png) 10 0 10 0;border-width:10px 0;}
+body.video #description_hud div.content_wrapper::-webkit-scrollbar-thumb:vertical{-webkit-border-image:url(images/vert_track_thumb_dark.png) 6 0 6 0;border-width:6px 0;}
+#main #content div.center-stack div.customer-reviews{margin-bottom:40px;}
+#main #content div.center-stack div.customer-review{zoom:1;}
+#main #content div.center-stack div.customer-review:after{content:" ";display:block;float:none;clear:both;}
+#main #content div.center-stack div.customer-review>p.truncate{max-height:54px;overflow:hidden;}
+#main #content div.center-stack div.customer-review>a.more-link{display:inline-block;float:right;margin-bottom:0;margin-top:-18px;}
+#main #content #left-stack div.lockup.ebook ul{margin-top:10px;}
+#main #content #left-stack div.lockup.ebook ul li span{font-weight:bold;color:#474747;}
+#main #content #left-stack div.lockup.ebook ul li span.availability-message{color:#474747;}
+#main #content #left-stack div.lockup.ebook ul li div.ebook-requirements{margin-top:27px;}
+#main #content #left-stack div.lockup.ebook ul li div.ebook-requirements span.availability-message{font-weight:normal;color:#898989;}
+#main #content #left-stack div.lockup.ebook ul li.language span,#main #content #left-stack div.lockup.ebook ul li.genre span,#main #content #left-stack div.lockup.ebook ul li span.label{font-weight:normal;color:#898989;}
+#main #content div.panel-content{width:650px;margin:92px 0 92px 136px;}
+#main #content div. panel-content:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+#main #content div.panel-content>div.left-stack{float:left;width:170px;}
+#main #content div.panel-content>div.center-stack{float:right;width:450px;padding-left:30px;}
+#main #content div.panel-content>div.center-stack h1{font-size:22px;line-height:30px;color:#474747;}
+#main #content div.panel-content>div.center-stack p{margin-bottom:14px;}
+#main #content div.panel-content>div.center-stack ul{margin-bottom:36px;}
+#main #content div.panel-content>div.center-stack ul li a.learn-more-ipad,#main #content div.panel-content>div.center-stack ul li a.learn-more-ibooks{display:inline-block;width:inherit;padding-right:8px;font-size:13px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/more.gif) 100% 50% no-repeat;}
+#main #content div.panel-content>div.center-stack a#get-ibook{display:none;}
+body.itunes-detected #main #content div.panel-content>div.center-stack a#get-ibook{display:block;}
+div.gc-badge{height:30px;margin-bottom:6px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/gc_badge.png) 100% no-repeat;}
+div.gc-badge span{display:block;text-indent:-9999px;}
+div#media-player-container{position:fixed;width:50px;height:50px;}
+td span.index{position:relative;display:block;width:21px;height:21px;}
+div.circular-preview-control{visibility:hidden;overflow:visible;position:absolute;top:-1px;right:-1px;width:21px;height:21px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/sprites_preview_playing_light.png) no-repeat 0 0;z-index:4000;}
+#main #content .track-list table tr.work-track td.name>span,#main #content .track-list table tr.work-track td.name>span>span.index{visibility:visible;overflow:visible;}
+#main #content .track-list table tr.work-track td.name>span>span.index div.circular-preview-control{left:-4px;right:auto;}
+*+html div.circular-preview-control{left:4px;}
+div.circular-preview-control div{width:21px;height:21px;}
+.foreground-image-stopped-default{background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/sprites-web-storefront.png) no-repeat -21px 0;width:21px;height:21px;}
+.foreground-image-stopped-hover{background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/sprites-web-storefront.png) no-repeat -21px 0;width:21px;height:21px;}
+.foreground-image-stopped-pressed{background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/sprites-web-storefront.png) no-repeat -42px 0;width:21px;height:21px;}
+.foreground-image-loading-default{background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/sprites-web-storefront.png) no-repeat -84px 0;width:21px;height:21px;}
+.foreground-image-loading-hover{background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/sprites-web-storefront.png) no-repeat -84px 0;width:21px;height:21px;}
+.foreground-image-loading-pressed{background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/sprites-web-storefront.png) no-repeat -105px 0;width:21px;height:21px;}
+.foreground-image-playing-default{background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/sprites-web-storefront.png) no-repeat -147px 0;width:21px;height:21px;}
+.foreground-image-playing-hover{background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/sprites-web-storefront.png) no-repeat -147px 0;width:21px;height:21px;}
+.foreground-image-playing-pressed{background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/sprites-web-storefront.png) no-repeat -168px 0;width:21px;height:21px;}
+.moviePanelContainer,.moviePanelShadow{position:fixed;width:100%;height:100%;top:0;left:0;bottom:0;right:0;z-index:9999;}
+.moviePanelShadow{background:#000;-moz-opacity:.85;filter:alpha(opacity=85);opacity:.85;}
+body.video .moviePanel{z-index:10000;}
+body.video .moviePanel{top:50%;*top:100px;left:50%;right:auto;bottom:auto;}
+body.video .moviePanel object,body.video .moviePanel video{top:0;z-index:-10;}
+.ACMediaControls .mediaControllerPanel{bottom:50%;}
+.moviePanelCloseLink{position:absolute;top:-12px;left:-12px;display:block;width:23px;height:23px;text-indent:-9999px;background:url(../AppData/Local/Microsoft/Windows/Temporary%20Internet%20Files/Content.IE5/W9R7I6V9/images/video_closebtn.png) 0 0 no-repeat;cursor:pointer;z-index:10001;}
+body.video .ACMediaControls .mediaControllerPanel{z-index:10001;}
+body.video .ACMediaControls{*top:0;}
+#main #content .track-list table{margin-left:0;}
+#main #content .center-stack .stack-section .price,#main #content .center-stack .stack-section .artwork,#main #content .center-stack .stack-section .parental-advisory{display:none;}
+#main #content .center-stack .stack-section .track-list{border-radius:0 4px 4px 4px;}
+#main #content .center-stack .stack-section .truncate{height:180px;overflow:hidden;}
+#main #content .center-stack .stack-section .blurbs{margin-bottom:30px;zoom:1;}
+#main #content .center-stack .stack-section .blurbs:after{content:" ";display:block;float:none;clear:both;}
+#main #content .center-stack .stack-section .blurbs .blurbs-title{font-size:15px;font-weight:bold;color:#474747;margin-bottom:8px;}
+#main #content .center-stack .stack-section .blurbs ul.track-blurbs{color:#898989;}
+#main #content .center-stack .stack-section .blurbs ul.track-blurbs li{margin-bottom:18px;}
+#main #content .center-stack .tabs-control-container{margin-bottom:-3px;margin-left:-16px;}
+#main #content .center-stack .tabs-control{overflow:hidden;}

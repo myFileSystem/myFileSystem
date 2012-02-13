@@ -19,10 +19,10 @@ $app = mysql_fetch_array($apps, MYSQL_ASSOC)
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 <title><?php $app[name] ?></title>
-<link rel="stylesheet" type="text/css" href="d:\web-storefront-base.css" />
-<link rel="stylesheet" type="text/css" href="d:\web-storefront-preview.css" />
-<script type="text/javascript" charset="utf-8" src="d:\web-storefront-base.css"></script>
-<script type="text/javascript" charset="utf-8" src="d:\web-storefront-preview.css"></script>
+<link rel="stylesheet" type="text/css" href="web-storefront-base.css" />
+<link rel="stylesheet" type="text/css" href="web-storefront-preview.css" />
+<script type="text/javascript" charset="utf-8" src="web-storefront-base.css"></script>
+<script type="text/javascript" charset="utf-8" src="web-storefront-preview.css"></script>
 </head>
 <body>
 
@@ -48,12 +48,12 @@ $app = mysql_fetch_array($apps, MYSQL_ASSOC)
               </br>
               <h2>Èí¼þ½ØÍ¼</h2>
             </div>
-            <div num-items="4" class="content">
+            <div num-items="3" class="content">
               <div>
-                <div class="lockup"><img width="320" height="480" alt="½ØÍ¼ 1" src="http://a4.mzstatic.com/us/r1000/117/Purple/c9/86/cb/mzl.qatgpdwh.320x480-75.jpg" /></div>
-                <div class="lockup"><img width="320" height="480" alt="½ØÍ¼ 2" src="http://a2.mzstatic.com/us/r1000/079/Purple/f7/3a/e3/mzl.udgnklxf.320x480-75.jpg" /></div>
-                <div class="lockup"><img width="320" height="480" alt="½ØÍ¼ 3" src="http://a4.mzstatic.com/us/r1000/063/Purple/f3/f2/6c/mzl.buhhmlnl.320x480-75.jpg" /></div>
-                <div class="lockup"><img width="320" height="480" alt="½ØÍ¼ 4" src="http://a2.mzstatic.com/us/r1000/078/Purple/d5/85/2a/mzl.mlaqftpc.320x480-75.jpg" /></div>
+
+                <div class="lockup"><img width="320" height="480" alt="½ØÍ¼ 2" src="<?php echo $app[truncation2]; ?>" /></div>
+                <div class="lockup"><img width="320" height="480" alt="½ØÍ¼ 3" src="<?php echo $app[truncation3]; ?>" /></div>
+                <div class="lockup"><img width="320" height="480" alt="½ØÍ¼ 4" src="<?php echo $app[truncation4]; ?>" /></div>
 
               </div>
             </div>
@@ -63,8 +63,8 @@ $app = mysql_fetch_array($apps, MYSQL_ASSOC)
 
         <div id="left-stack">
           <div rating-software="100,itunes-games" parental-rating="1" class="lockup product application">
-            <div class="artwork"><img width="175" height="175" alt="Farm Frenzy 3 " class="artwork" src="pic1.jpg" /><span class="mask"></span></div>
-            </a> <input title="ÏÂÔØÈí¼þ: <?php echo $app[name]; ?>" type=image src="test.jpg" onclick="JavaScript:location.href='test.apk'"/>
+            <div class="artwork"><img width="155" height="155" alt="titile" class="artwork" src="<?php echo $app[truncation1]; ?>" /><span class="mask"></span></div>
+            </a> <input title="ÏÂÔØÈí¼þ: <?php echo $app[name]; ?>" type=image src="../images/downloadButten.jpg" onclick="JavaScript:location.href='test.apk'"/>
 
             <ul class="list">
               <li>
